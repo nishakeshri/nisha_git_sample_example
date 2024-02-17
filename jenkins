@@ -1,0 +1,5 @@
+sh '''mkdir example
+cd example
+echo "this is new file" >> file1.sh
+cat  file1.sh
+pwd'''
