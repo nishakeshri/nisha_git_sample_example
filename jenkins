@@ -1,5 +1,18 @@
-sh '''mkdir example
+pipeline {
+  agent {
+    docker { image 'node:16-alpine' }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh '''mkdir example
 cd example
 echo "this is new file" >> file1.sh
 cat  file1.sh
 pwd'''
+
+      }
+    }
+  }
+}
+
